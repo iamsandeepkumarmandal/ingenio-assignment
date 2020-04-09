@@ -182,6 +182,12 @@
             @media (max-width: $extra-small-mobile-devices+px) {
                 margin-bottom: 10px;
                 text-align: center;
+                display: flex;
+                display: -webkit-flex;
+                justify-content: center;
+                -webkit-justify-content: center;
+                align-items: center;
+                -webkit-align-items: center;
             }
             h4 {
                 color: $card-violet-color;
@@ -217,6 +223,10 @@
                         transform: translateX(100%);
                         -webkit-transform: translateX(100%);
                     }
+                }
+                @media (max-width: $extra-small-mobile-devices+px) {
+                    margin-bottom: 0;
+                    margin-right: 15px;
                 }
             }
         }
