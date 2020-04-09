@@ -20,9 +20,6 @@ body {
     @media (max-width: $extra-small-mobile-devices+px) {
         font-size: 12px;
     }
-    // @media (min-width: $medium-device-min-width+px) and (max-width: $medium-device-max-width+px) {
-    //     font-size: (13/$base-font-size)+rem;
-    // }
 }
 .display-block {
     display: block;
@@ -81,9 +78,4 @@ body {
    @media (max-width: $mobile-max-width+px) {
        font-size: (20/$base-font-size)+rem;
    }
-}
-
-.responsive-image {
-    max-width: 100%;
-    height: auto;
 }

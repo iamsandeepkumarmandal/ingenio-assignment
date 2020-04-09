@@ -24,15 +24,15 @@
         justify-content: space-around;
         -webkit-justify-content: space-around;
         .profile-image {
-            position: relative;
+            @extend .position-relative;
             .add-to-favorites {
-                position: absolute;
+                @extend .position-absolute;
                 bottom: 5%;
                 right: 1%;
                 label {
-                    background-color: #ffffff;
-                    width: 28px;
-                    height: 28px;
+                    background-color: $white-color;
+                    width: 32px;
+                    height: 32px;
                     border: 2px solid #dadada;
                     border-radius: 50%;
                     cursor: pointer;
@@ -46,7 +46,7 @@
                         &~ label {
                             background-color: red;
                             border-color: red;
-                            color:#ffffff;
+                            color:$white-color;
                         }
                     }
                 }
@@ -87,6 +87,10 @@
             }
             a {
                 color: $profile-green-color;
+                @include transition(300ms);
+                &:hover {
+                    color: $card-violet-color;
+                }
             }
             p {
                 color: #a1a1a1;
@@ -184,7 +188,7 @@
                 @media (max-width: $mobile-max-width+px) {
                     background-color: $card-violet-color;
                     font-weight: $normal-font-weight;
-                    color: #ffffff;
+                    color: $white-color;
                     position: relative;
                     padding: 3px 5px;
                     margin-bottom: 5px;
@@ -218,15 +222,15 @@
         }
         .profile-button {
             background-color: $profile-green-color;
-            color: #ffffff;
+            color: $white-color;
             padding: 10px 15px;
-            @extend .text-center;
             border-radius: $base-border-radius;
-            position: relative;
             overflow: hidden;
+            @extend .position-relative;
+            @extend .text-center;
             h5 {
                 font-weight: $medium-font-weight;
-                position: relative;
+                @extend .position-relative;
                 z-index: 1;
                 font-size: 1rem;
                 @media (min-width: $tablet-min-width+px) and (max-width: $tablet-max-width+px) {
@@ -245,7 +249,7 @@
             }
             &:before {
                 content: '';
-                position: absolute;
+                @extend .position-absolute;
                 left: 0;
                 top: 0;
                 height: 100%;

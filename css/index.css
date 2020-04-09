@@ -78,11 +78,11 @@ body {
   -ms-flex: 1;
 }
 
-.position-relative {
+.position-relative, .profile-card-wrapper--cta-wrapper .profile-button h5, .profile-card-wrapper--cta-wrapper .profile-button, .profile-card-wrapper--image-wrapper .profile-image {
   position: relative;
 }
 
-.position-absolute {
+.position-absolute, .profile-card-wrapper--cta-wrapper .profile-button:before, .profile-card-wrapper--image-wrapper .profile-image .add-to-favorites {
   position: absolute;
 }
 
@@ -105,11 +105,6 @@ body {
   .heading-font {
     font-size: 1.25rem;
   }
-}
-
-.responsive-image {
-  max-width: 100%;
-  height: auto;
 }
 
 .profile-card-wrapper {
@@ -142,18 +137,14 @@ body {
   justify-content: space-around;
   -webkit-justify-content: space-around;
 }
-.profile-card-wrapper--image-wrapper .profile-image {
-  position: relative;
-}
 .profile-card-wrapper--image-wrapper .profile-image .add-to-favorites {
-  position: absolute;
   bottom: 5%;
   right: 1%;
 }
 .profile-card-wrapper--image-wrapper .profile-image .add-to-favorites label {
   background-color: #ffffff;
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   border: 2px solid #dadada;
   border-radius: 50%;
   cursor: pointer;
@@ -204,6 +195,14 @@ body {
 }
 .profile-card-wrapper--image-wrapper .profile-details a {
   color: #56bb21;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+}
+.profile-card-wrapper--image-wrapper .profile-details a:hover {
+  color: #a70dff;
 }
 .profile-card-wrapper--image-wrapper .profile-details p {
   color: #a1a1a1;
@@ -352,12 +351,10 @@ body {
   color: #ffffff;
   padding: 10px 15px;
   border-radius: 5px;
-  position: relative;
   overflow: hidden;
 }
 .profile-card-wrapper--cta-wrapper .profile-button h5 {
   font-weight: 500;
-  position: relative;
   z-index: 1;
   font-size: 1rem;
 }
@@ -378,7 +375,6 @@ body {
 }
 .profile-card-wrapper--cta-wrapper .profile-button:before {
   content: "";
-  position: absolute;
   left: 0;
   top: 0;
   height: 100%;
