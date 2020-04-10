@@ -153,6 +153,19 @@
                 @extend .display-inline-block;
                 float: left;
             }
+            h5 {
+                .mobile {
+                    display: none;
+                    @media (max-width: $extra-small-mobile-devices+px) {
+                        display: inline-block;
+                    }
+                }
+                .desktop {
+                    @media (max-width: $extra-small-mobile-devices+px) {
+                        display: none;
+                    }
+                }
+            }
         }
         &> div {
             margin-bottom: 15px;

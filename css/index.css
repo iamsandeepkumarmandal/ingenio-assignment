@@ -270,6 +270,19 @@ body {
 .profile-card-wrapper--review-ratings-wrapper .reviews li {
   float: left;
 }
+.profile-card-wrapper--review-ratings-wrapper .reviews h5 .mobile {
+  display: none;
+}
+@media (max-width: 439.8px) {
+  .profile-card-wrapper--review-ratings-wrapper .reviews h5 .mobile {
+    display: inline-block;
+  }
+}
+@media (max-width: 439.8px) {
+  .profile-card-wrapper--review-ratings-wrapper .reviews h5 .desktop {
+    display: none;
+  }
+}
 .profile-card-wrapper--review-ratings-wrapper > div {
   margin-bottom: 15px;
 }
